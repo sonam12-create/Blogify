@@ -33,9 +33,7 @@ const AuthPage = () => {
 
       localStorage.setItem("token", res.data.token);
       if (res.data.success) {
-        {
-          isSignup ? setIsSignup(true) : navigate("/");
-        }
+        navigate("/");
         toast(`${isSignup ? "Registered" : "Logged in"} successfully!`);
       
       } else {
