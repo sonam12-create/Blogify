@@ -15,6 +15,7 @@ const BlogDetailPage = () => {
       try {
         const res = await axios.get(`http://localhost:3000/api/blogs/${id}`);
         setBlog(res.data);
+        console.log(blog)
         setLoading(false);
       } catch (error) {
         console.error("Error fetching blog:", error);

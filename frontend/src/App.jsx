@@ -20,11 +20,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Login />} />
+        <Route path="/blogs/:id" element={<BlogDetailPage />} />
 
         {token && (
           <>
             <Route path="/create-blog" element={<BlogEditor />} />
-            <Route path="/blogs/:id" element={<BlogDetailPage />} />
             <Route path="/editor/:id" element={<BlogEditor />} />
             <Route path="/user-profile" element={<UserProfile />} />
             <Route
