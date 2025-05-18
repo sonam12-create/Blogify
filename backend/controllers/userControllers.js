@@ -20,6 +20,10 @@ const registerUser = async (req, res) => {
       return res.json({ success: false, message: "Invalid Email" });
     }
 
+    if(password.length < 6){
+      return res.json({ success: false, message: "Password must be at least 6 characters long" });
+    }
+
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
