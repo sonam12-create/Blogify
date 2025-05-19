@@ -39,12 +39,12 @@ const BlogDetailPage = () => {
         Back to Blogs
       </button>
       
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+      <div className="max-w-4xl pt-5 mx-auto bg-white rounded-xl shadow-md overflow-hidden">
         {blog.mediaUrl && (
           <img
             src={blog.mediaUrl}
             alt="Blog"
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-contain"
           />
         )}
         <div className="p-6">
