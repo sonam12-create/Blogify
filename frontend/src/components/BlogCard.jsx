@@ -1,15 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate(`/blogs/${blog._id}`);
-  };
   return (
+    <Link to={`/blogs/${blog._id}`}>
     <div
       className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col h-96"
-      onClick={handleClick}
     >
       {/* Image container with fixed height */}
       <div className="w-full h-48 overflow-hidden">
@@ -34,6 +32,7 @@ const BlogCard = ({ blog }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
