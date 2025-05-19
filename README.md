@@ -18,7 +18,6 @@ A full-stack blog platform where users can write, save drafts, publish posts, an
 ## 🛠 Tech Stack
 
 ### Frontend
-- *Next.js*
 - *React*
 - *Tailwind CSS*
 - *Axios*
